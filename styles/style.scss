@@ -13,9 +13,9 @@ body {
 
 
 .container {
-    max-width: 1170px;
+    max-width: 1216px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     padding: 88px 0px;
@@ -23,9 +23,11 @@ body {
 
 .hero-inner {
     display: flex;
+    justify-content: space-between;
     gap: 32px;
 }
 .menu-item-container {
+    width: 800px;
     h1 {
         color: #260F08;
         text-align: left;
@@ -37,9 +39,10 @@ body {
 
 .hero-grid {
     display: grid;
-    grid-template-rows: 275px 275px 275px;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 225px 225px 225px;
     gap: 24px 32px;
+    width: 70%;
     .product {
         display: flex;
         flex-direction: column;
@@ -77,5 +80,39 @@ body {
             font-size: 16px;
             font-weight: 400;
         }
+        p::before {
+            content: '$';
+        }
     }
 }
+
+.sidebar {
+    background-color: white;
+    width: 384px;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    .head {
+        color: #C73B0F;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: left;
+    }
+    .foot {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid black;
+    }
+    .cartItem {
+        padding: 20px 0px;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
