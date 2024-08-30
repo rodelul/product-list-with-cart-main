@@ -103,6 +103,17 @@ body {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid black;
+  padding: 16px 0px;
+}
+.sidebar .foot h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #260F08;
+}
+.sidebar .foot h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #260F08;
 }
 .sidebar .cartItem {
   padding: 20px 0px;
@@ -111,4 +122,72 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.cart-item {
+  padding: 16px 0px;
+}
+
+.itemCartName {
+  font-size: 16px;
+  color: #260F08;
+  font-weight: 400;
+}
+
+.count {
+  color: #C73B0F;
+  text-align: start;
+}
+
+.namePrice {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #87635A;
+}
+
+.product {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  margin-bottom: 10px;
+}
+
+.confirm-order {
+  display: none; /* Hidden by default */
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Basic styling for the pop-up */
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  z-index: 1000;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }/*# sourceMappingURL=style.css.map */

@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product list with cart</title>
-
 </head>
 <body>
   <section class="hero">
@@ -19,20 +18,26 @@
           </div>
         </div>
         <div class="sidebar" id="cartItem">
+          <div class="count">Your Items</div>
           <div class="head"><p>My Cart</p></div>
           <div class="cartItem">Your cart is empty</div>
           <div class="foot">
-            <h3>Order Total</h3>
-            <h2 class="total">$0.00</h2>
+              <h3>Order Total</h3>
+              <h2 class="total">$0.00</h2>
           </div>
-          
+          <button class="confirm-order" id="confirmOrder">Confirm Order</button>
+        </div>
+        <!-- Pop-up for order confirmation -->
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup" id="orderPopup">
+          <h2>Your Order</h2>
+          <div id="orderItems"></div>
+          <button onclick="closePopup()">Close</button>
         </div>
       </div>
     </div>
   </section>
   
-
-
   <script src="/script.js"></script>
 </body>
 </html>
