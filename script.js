@@ -10,7 +10,9 @@ fetch('./data.json')
             const card = `
                 <div class="product">
                     <img src="${product.image.desktop}" />
+                <div class='button-add-to-cart'>
                     <button class="add-to-cart" data-index="${i}">Add to Cart</button>
+                </div>    
                     <h2>${product.category}</h2>
                     <h1>${product.name}</h1>
                     <p>${product.price}</p>
@@ -46,13 +48,14 @@ function removeFromCart(index) {
 function displaycart(){
     const cartItemContainer = document.getElementById('cartItem');
     const confirmOrderButton = document.getElementById('confirmOrder');
+    const placeOrderButton = document.getElementById('placeOrder'); // Get the Place Order button
     const itemCount = cart.length;
 
     console.log('Number of items in cart:', itemCount);
 
     if (itemCount === 0) {
         cartItemContainer.innerHTML = `
-            <div class="count">Your Items</div>
+            <div class="count"></div>
             <div class="head"><p>My Cart</p></div>
             <div class="cartItem">Your cart is empty</div>
             <div class="foot">
@@ -61,7 +64,8 @@ function displaycart(){
             </div>
         `;
         confirmOrderButton.style.display = 'none'; // Hide the button if the cart is empty
-        console.log('Confirm Order Button hidden because cart is empty');
+        placeOrderButton.style.display = 'none';  // Hide the Place Order button if the cart is empty
+        console.log('Confirm Order Button and Place Order Button hidden because cart is empty');
     } else {
         const itemsHeader = `<h2 class="count">Your Items (${itemCount})</h2>`;
         const cartItems = cart.map((item, i) => {
@@ -87,12 +91,13 @@ function displaycart(){
             </div>
         `;
 
-        confirmOrderButton.style.display = 'block'; // Show the button if the cart is not empty
-        console.log('Confirm Order Button shown because cart is not empty');
+        confirmOrderButton.style.display = 'block'; // Show the Confirm Order button if the cart is not empty
+        placeOrderButton.style.display = 'block';  // Show the Place Order button if the cart is not empty
+        console.log('Confirm Order Button and Place Order Button shown because cart is not empty');
     }
 
     console.log('Cart:', cart);
-    console.log('Confirm Order Button visibility:', confirmOrderButton.style.display);
+    console.log('Confirm Order Button visibility:', placeOrderButton.style.display);
 }
 
 // Event delegation for removing items from the cart
@@ -138,3 +143,9 @@ function closePopup() {
     popupOverlay.style.display = 'none';
     orderPopup.style.display = 'none';
 }
+
+// Add an event listener to the Place Order button (if needed for further actions)
+document.getElementById('placeOrder').addEventListener('click', function() {
+    alert('Order placed successfully!');
+    // You can add additional logic here for order placement
+});

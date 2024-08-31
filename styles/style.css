@@ -58,7 +58,15 @@ body {
   font-family: "Red Hat Text", sans-serif;
   font-size: 14px;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
   cursor: pointer;
+}
+.hero-grid .product button.add-to-cart::before {
+  content: url("/assets/images/icon-add-to-cart.svg");
+  margin-bottom: -4px;
 }
 .hero-grid .product img {
   width: 100%;
@@ -148,6 +156,26 @@ body {
 
 .product {
   margin-bottom: 20px;
+}
+.product .button-add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product h1 {
+  text-align: left;
+}
+
+.delElement {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #AD8A85;
+  color: #AD8A85;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .cart-item {
